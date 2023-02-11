@@ -1,0 +1,53 @@
+.header {
+    &__top {
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        gap: 3%;
+        align-items: flex-end;
+
+        &-menu {
+            cursor: pointer;
+            border-radius: 10%;
+            color: #4671D5;
+
+            &:hover {
+                background: #00000010;
+            }
+        }
+    }
+
+    &__pathTitle {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            gap: 2%;
+
+            li:before {
+                content: "•";
+                margin-right: 0;
+                color: #4671D5;
+                padding-right: 5px;
+            }
+
+            li {
+                color: gray;
+                margin-top: 2%;
+                flex-wrap: nowrap;
+                list-style-type: none;
+                cursor: pointer;
+            }
+
+            .active {
+                font-weight: 700;
+                color: #292929;
+            }
+
+        }
+
+
+    }
+
+
+}

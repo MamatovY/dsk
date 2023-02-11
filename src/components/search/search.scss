@@ -1,0 +1,23 @@
+.search {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+
+    &__form {
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+
+        padding-bottom: 2%;
+
+        svg {
+            display: block;
+        }
+
+        &-input {
+            width: 100%;
+            display: block;
+            outline: none;
+            border: none;
+            // border: 1px solid red;
+            padding-bottom: 1%;
+        }
+    }
+}

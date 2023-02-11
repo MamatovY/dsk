@@ -1,0 +1,86 @@
+.App {
+  text-align: left;
+  padding-bottom: 200px;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 3%;
+  margin: 0 auto;
+}
+
+span {
+  color: #7d7d7d;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  font-size: calc(12px + 11 * (100vw / 1280));
+}
+
+input {
+  font-size: calc(16px + 11 * (100vw / 1280));
+}
+
+h1 {
+  font-size: calc(24px + 16 * (100vw / 1280));
+}
+
+h2 {
+  font-size: calc(20px + 12 * (100vw / 1280));
+}
+
+h3 {
+  font-size: calc(17px + 9 * (100vw / 1280));
+}
+
+h4 {
+  font-size: calc(12px + 11 * (100vw / 1280));
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 767px) {
+  .App {
+    font-size: calc(12px + (11 + 11 * 0.7) * ((100vw - 320px) / 1280));
+  }
+
+  input {
+    font-size: calc(15px + (11 + 11 * 0.7) * ((100vw - 320px) / 1280));
+  }
+
+  h1 {
+    font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+  }
+
+  h2 {
+    font-size: calc(20px + (12 + 12 * 0.7) * ((100vw - 320px) / 1280));
+  }
+
+  h3 {
+    font-size: calc(17px + (9 + 9 * 0.7) * ((100vw - 320px) / 1280));
+  }
+
+  h4 {
+    font-size: calc(12px + (11 + 11 * 0.7) * ((100vw - 320px) / 1280));
+  }
+}
