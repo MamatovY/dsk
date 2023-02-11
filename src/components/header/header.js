@@ -57,7 +57,7 @@ const Header = () => {
                 </div>
                 <div className={modal ? 'modal active' : 'modal'}>
                     <div className="modal__block">
-                        <div class="close" onClick={() => setModal(!modal)}><MdOutlineClose /></div>
+                        <div className="close" onClick={() => setModal(!modal)}><MdOutlineClose /></div>
                         <h1>Куда можно потыкать</h1>
                         <h3>
                             На менюшку
