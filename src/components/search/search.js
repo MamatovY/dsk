@@ -6,7 +6,7 @@ const Search = () => {
         <div className='search'>
             <form className='search__form'>
                 <input className='search__form-input' type='text' name='text' placeholder='Поиск по каталогу' />
-                <div>
+                <div className='search__form-btn'>
                     <AiOutlineSearch color='grey' />
                 </div>
             </form>

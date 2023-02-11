@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
     Navigation,
@@ -19,7 +21,7 @@ const Product = () => {
     SwiperCore.use([Navigation, Pagination, Autoplay, Virtual
     ]);
 
-    const rating = 3.5
+    const [rating, setRating] = useState(3.5)
 
     return (
         <div className='product'>
@@ -33,8 +35,12 @@ const Product = () => {
                             let half = fraction !== 0 && num === i && fraction > 0.3 && fraction < 1 //Половина будет если дробь больше 0.3 и меньше 1
 
                             return (
-                                <Star key={i}
-                                    selected={num > i} halfSelected={half} />
+                                <Star
+                                    index={i + 1}
+                                    setRating={setRating}
+                                    key={i}
+                                    selected={num > i}
+                                    halfSelected={half} />
                             )
                         }
                         )

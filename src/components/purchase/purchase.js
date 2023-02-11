@@ -1,7 +1,7 @@
 import './purchase.scss'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { HiPlus, HiMinus } from 'react-icons/hi'
-import { MdPhoneInTalk, MdOutlineFavoriteBorder } from 'react-icons/md'
+import { MdPhoneInTalk, MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import whatsApp from './../../assets/images/WhatsApp.png'
 import viber from './../../assets/images/Viber.png'
 import telegramm from './../../assets/images/Telegram.png'
@@ -10,6 +10,7 @@ import { useState } from 'react'
 
 const Purchase = () => {
     const [count, setCount] = useState(10)
+    const [favorite, setFavorite] = useState(true)
 
     return (
         <div className="purchase">
@@ -37,10 +38,10 @@ const Purchase = () => {
                         В корзину
                     </div>
                 </div>
-                <div className="purchase__buttons-favorite button">
+                <div className="purchase__buttons-favorite button" onClick={() => setFavorite(!favorite)}>
                     <div>
-                        <span>
-                            <MdOutlineFavoriteBorder />
+                        <span>{favorite ? <MdOutlineFavorite color='red' /> :
+                            <MdOutlineFavoriteBorder />}
                         </span>
                     </div>
                     <div>
@@ -49,14 +50,14 @@ const Purchase = () => {
                         </span>
                     </div>
                 </div>
-                <div className="purchase__buttons-call button">
+                <a href='tel:+996550360636' className="purchase__buttons-call button">
                     <div>
                         <MdPhoneInTalk />
                     </div>
                     <div>
                         Позвонить
                     </div>
-                </div>
+                </a>
             </div>
 
             <div className="purchase__messengers">
@@ -66,13 +67,13 @@ const Purchase = () => {
                     </span>
                 </div>
                 <div className="purchase__messengers-app">
-                    <a href="/">
+                    <a href="https://wa.me/996550360636">
                         <img src={whatsApp} alt="" />
                     </a>
                     <a href="/">
                         <img src={viber} alt="" />
                     </a>
-                    <a href="/">
+                    <a href="https://t.me/MamatovY">
                         <img src={telegramm} alt="" />
                     </a>
                 </div>

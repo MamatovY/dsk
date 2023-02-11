@@ -7,6 +7,7 @@ import { useState } from 'react';
 const Header = () => {
     const [menu, setMenu] = useState(false)
     const [path, setPath] = useState('path6')
+    const [modal, setModal] = useState(true)
     const pathData = [
         { path: 'path1', title: 'Главная' },
         { path: 'path2', title: 'Каталог товаров' },
@@ -53,6 +54,33 @@ const Header = () => {
                     <ul>
                         {pathList}
                     </ul>
+                </div>
+                <div className={modal ? 'modal active' : 'modal'}>
+                    <div className="modal__block">
+                        <div class="close" onClick={() => setModal(!modal)}><MdOutlineClose /></div>
+                        <h1>Куда можно потыкать</h1>
+                        <h3>
+                            На менюшку
+                        </h3>
+                        <h3>
+                            На звездочки
+                        </h3>
+                        <h3>
+                            Свайпер категорий
+                        </h3>
+                        <h3>
+                            Свайпер фото
+                        </h3>
+                        <h3>
+                            На счетчик
+                        </h3>
+                        <h3>
+                            На избранное
+                        </h3>
+                        <h3>
+                            На соц. сети
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>

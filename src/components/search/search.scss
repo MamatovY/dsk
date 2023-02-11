@@ -16,8 +16,15 @@
             display: block;
             outline: none;
             border: none;
-            // border: 1px solid red;
             padding-bottom: 1%;
+        }
+
+        &-btn {
+            cursor: pointer;
+
+            &:active {
+                transform: scale(0.9);
+            }
         }
     }
 }
