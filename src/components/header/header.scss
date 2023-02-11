@@ -75,6 +75,7 @@
             border: 1px solid #888;
             color: #292929;
             width: 70%;
+            border-radius: 3%;
 
             h1 {
                 text-align: center;
@@ -92,6 +93,10 @@
             top: 0;
             color: #fff;
             width: 20%;
+
+            &:active {
+                transform: scale(0.7);
+            }
         }
     }
 
